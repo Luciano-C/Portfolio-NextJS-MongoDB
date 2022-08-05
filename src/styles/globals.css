@@ -24,3 +24,15 @@ a {
     background: black;
   }
 }
+
+.banner-foto {
+  height: 15em;
+  width: 52.5em;
+  object-fit: cover;
+}
+
+.flag-icon {
+  height: 2em;
+  width: 2em;
+  margin: 0.2em 0.3em 0.2em 0.3em;
+}
