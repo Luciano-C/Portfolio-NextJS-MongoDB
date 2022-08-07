@@ -19,6 +19,7 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
@@ -26,13 +27,34 @@ a {
 }
 
 .banner-foto {
-  height: 15em;
-  width: 52.5em;
+  height: 10em;
+  width: 100%;
   object-fit: cover;
+  border: solid black 0.1em;
 }
 
 .flag-icon {
   height: 2em;
   width: 2em;
   margin: 0.2em 0.3em 0.2em 0.3em;
+}
+
+.lcf-logo {
+  height: 2em;
+  width: 6em;
+  object-fit: cover;
+  margin-left: 1em;
+
+}
+
+.technology-background {
+  background: ivory;
+  border-radius: 20%;
+  width: 4em;
+  height: 4em;
+}
+
+.technologies {
+  width: 3em;
+  height: 3em;
 }

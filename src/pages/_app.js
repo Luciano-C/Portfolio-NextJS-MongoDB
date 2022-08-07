@@ -17,7 +17,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <PortfolioProvider>
       <Layout>
-        <Component {...pageProps} />
+        <div className='bg-dark'>
+          <Component {...pageProps} />
+        </div>
+
       </Layout>
     </PortfolioProvider>
 
