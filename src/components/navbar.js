@@ -41,23 +41,27 @@ export const Navbar = () => {
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
                             <Link href="/">
-                                <a className="nav-link active" aria-current="page">Home</a>
+                                <a className="nav-link active" aria-current="page">
+                                    {variables.isSpanish ? "Inicio" : "Home"}
+                                </a>
                             </Link>
                         </li>
 
                         <li className="nav-item">
                             <Link href="/projects">
-                                <a className="nav-link active" aria-current="page">Projects</a>
+                                <a className="nav-link active" aria-current="page">
+                                    {variables.isSpanish ? "Proyectos" : "Projects"}
+                                </a>
                             </Link>
                         </li>
 
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Lenguaje
+                            {variables.isSpanish ? "Lenguaje" : "Language"}
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><div onClick={() => setLanguage("esp")} className="language-div"><img className='img img-fluid flag-icon' src="/spain.png" alt="" />Español</div></li>
-                                <li><div onClick={() => setLanguage("ing")} className="language-div"><img className='img img-fluid flag-icon' src="/united-kingdom.png" alt="" />Inglés</div></li>
+                                <li><div onClick={() => setLanguage("esp")} role="button" className='m-1'><img className='img img-fluid flag-icon' src="/spain.png" alt="" />{variables.isSpanish ? "Español" : "Spanish"}</div></li>
+                                <li><div onClick={() => setLanguage("ing")} role="button" className='m-1'><img className='img img-fluid flag-icon' src="/united-kingdom.png" alt="" />{variables.isSpanish ? "Inglés" : "English"}</div></li>
                             </ul>
                         </li>
                     </ul>
