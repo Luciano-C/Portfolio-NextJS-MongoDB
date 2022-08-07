@@ -1,8 +1,8 @@
 import { usePortfolioContext } from "../context/PortfolioContext"
-import { technologies, learning } from "../utils/iconsTechnologies";
 
 
-export default function Home() {
+
+export default function Home({ technologies }) {
 
   const { variables, actions } = usePortfolioContext();
 
@@ -23,7 +23,7 @@ export default function Home() {
       <div className="row">
         <div className="col">
           <h2 className="m-3">
-            Acerca de
+            {variables.isSpanish ? "Acerca de" : "About"}
           </h2>
           <p className="m-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -44,14 +44,14 @@ export default function Home() {
       <div className="row">
         <div className="col">
           <h2 className="m-3">
-            Tecnologías
+            {variables.isSpanish ? "Tecnologías" : "Technologies"}
           </h2>
           <ul className="d-flex overflow-auto justify-content-between p-2 m-3">
-            {technologies.map((x, i) => {
+            {technologies.filter(x => x.status === "learned").map((x, i) => {
               return (
                 <div key={i} className="m-3 d-flex flex-column align-items-center">
                   <div className="technology-background d-flex justify-content-center align-items-center">
-                  <img src={x.link} className="img technologies" />
+                    <img src={x.link} className="img technologies" />
                   </div>
                   <span>{x.name}</span>
                 </div>
@@ -64,10 +64,10 @@ export default function Home() {
       <div className="row">
         <div className="col">
           <h2 className="m-3">
-            Actualmente aprendiendo
+            {variables.isSpanish ? "Actualmente aprendiendo" : "Currently learning"}
           </h2>
           <ul className="d-flex overflow-auto justify-content-start p-2 m-3">
-            {learning.map((x, i) => {
+            {technologies.filter(x => x.status === "learning").map((x, i) => {
               return (
                 <div key={i} className="m-4 d-flex flex-column align-items-center">
                   <div className="technology-background d-flex justify-content-center align-items-center">
@@ -82,4 +82,18 @@ export default function Home() {
       </div>
     </div>
   )
+}
+
+
+export const getServerSideProps = async (context) => {
+
+  const res = await fetch("http://localhost:3000/api/technologies");
+  const technologies = await res.json();
+
+
+  return {
+    props: {
+      technologies
+    }
+  }
 }

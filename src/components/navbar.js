@@ -1,8 +1,31 @@
 import React from 'react'
 import Link from 'next/link'
+import { usePortfolioContext } from '../context/PortfolioContext'
+
+
 
 
 export const Navbar = () => {
+
+    const { variables, actions } = usePortfolioContext();
+
+    const setLanguage = (language) => {
+        switch (true) {
+            case language === "esp" && variables.isSpanish:
+                break;
+            case language === "esp" && !variables.isSpanish:
+                actions.toggleLanguage();
+                break;
+            case language === "ing" && variables.isSpanish:
+                actions.toggleLanguage();
+                break;
+            case language === "ing" && !variables.isSpanish:
+                break;
+            default:
+                break;
+        }
+    }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
@@ -33,10 +56,8 @@ export const Navbar = () => {
                                 Lenguaje
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                {/* <li><a className="dropdown-item" href="#">Español</a></li>
-                                <li><a className="dropdown-item" href="#">Inglés</a></li> */}
-                                <li><div><img className='img img-fluid flag-icon' src="/spain.png" alt="" />Español</div></li>
-                                <li><div><img className='img img-fluid flag-icon' src="/united-kingdom.png" alt="" />Inglés</div></li>
+                                <li><div onClick={() => setLanguage("esp")} className="language-div"><img className='img img-fluid flag-icon' src="/spain.png" alt="" />Español</div></li>
+                                <li><div onClick={() => setLanguage("ing")} className="language-div"><img className='img img-fluid flag-icon' src="/united-kingdom.png" alt="" />Inglés</div></li>
                             </ul>
                         </li>
                     </ul>

@@ -25,6 +25,7 @@ export const PortfolioProvider = ({ children }) => {
 
     const toggleLanguage = () => {
         setIsSpanish( isSpanish ? false : true);
+        return;
     }
 
     // Value for Context.Provider
