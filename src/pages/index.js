@@ -46,6 +46,9 @@ export default function Home({ technologies }) {
           <h2 className="m-3">
             {variables.isSpanish ? "Tecnologías" : "Technologies"}
           </h2>
+          <p className="m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Expedita excepturi corrupti optio voluptatem sunt! Ipsa, provident eveniet. Beatae, numquam ipsum.
+          </p>
           <ul className="d-flex overflow-auto justify-content-between p-2 m-3">
             {technologies.filter(x => x.status === "learned").map((x, i) => {
               return (
@@ -66,6 +69,9 @@ export default function Home({ technologies }) {
           <h2 className="m-3">
             {variables.isSpanish ? "Actualmente aprendiendo" : "Currently learning"}
           </h2>
+          <p className="m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Expedita excepturi corrupti optio voluptatem sunt! Ipsa, provident eveniet. Beatae, numquam ipsum.
+          </p>
           <ul className="d-flex overflow-auto justify-content-start p-2 m-3">
             {technologies.filter(x => x.status === "learning").map((x, i) => {
               return (

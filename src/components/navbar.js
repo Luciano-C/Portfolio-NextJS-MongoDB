@@ -4,7 +4,6 @@ import { usePortfolioContext } from '../context/PortfolioContext'
 
 
 
-
 export const Navbar = () => {
 
     const { variables, actions } = usePortfolioContext();
@@ -27,7 +26,7 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-black">
             <div className="container-fluid">
                 <Link href="/">
                     <a className="navbar-brand">
@@ -56,7 +55,7 @@ export const Navbar = () => {
                         </li>
 
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {variables.isSpanish ? "Lenguaje" : "Language"}
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
