@@ -25,7 +25,27 @@ export default function Home({ technologies }) {
           <h2 className="m-3">
             {variables.isSpanish ? "Acerca de" : "About"}
           </h2>
-          <p className="m-3">
+
+          <div className="card mb-3 bg-transparent" style={{ maxWidth: "98%" }}>
+            <div className="row g-0">
+              <div className="col-md-9">
+                <div className="card-body">
+                  <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nisi voluptas. Eaque incidunt reprehenderit eveniet quasi architecto, possimus voluptatum quos iusto laudantium, voluptatem error ex quam minima totam maiores ratione. 
+                  Voluptatibus repellendus corrupti id! Architecto optio repudiandae odio, facere cumque, minima officia illum harum eius nisi excepturi aliquid nam distinctio labore. Soluta ad atque rerum deserunt fugiat debitis praesentium optio necessitatibus iste sit voluptas dicta nobis quam reprehenderit hic dolore, 
+                  quo totam alias voluptatum ipsam aut. Sed at eaque molestias, distinctio consequuntur perspiciatis in. Eos, adipisci quibusdam dolores perferendis asperiores, libero distinctio, repellat blanditiis sit laboriosam ut quaerat similique accusantium sed sunt in perspiciatis reprehenderit cupiditate aperiam explicabo magni eaque temporibus quasi nisi? Eum architecto dolorum aliquid voluptatem molestias, 
+                  quod nostrum libero inventore minima debitis voluptates voluptatibus molestiae. Deleniti enim quia rerum velit dolor ut asperiores optio fugit consectetur qui iure, quis, perspiciatis expedita. Quos reiciendis atque suscipit minima, aut ex. Excepturi ex quaerat quia harum labore pariatur est asperiores, 
+                  voluptas alias dolore eum molestiae dignissimos deleniti sint maiores quam enim quod consequatur a possimus nulla aperiam minus neque nobis! Esse doloribus illo corrupti minus? Sed culpa, illo expedita ipsa dolore consequuntur rem quibusdam labore placeat ea id? Quas, explicabo?</p>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <img src="https://res.cloudinary.com/dpfjfmvzs/image/upload/v1659924675/Portfolio/General/Foto_CV_mustab.jpg" class="img-fluid rounded" alt="..." />
+              </div>
+            </div>
+          </div>
+
+
+
+          {/* <p className="m-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Quae dolores eius cupiditate perferendis aliquam alias corporis deleniti adipisci molestias,
             fugit delectus voluptatibus exercitationem ab cum pariatur blanditiis totam, quidem voluptatem illum eaque provident ad officiis quis quaerat!
@@ -37,7 +57,7 @@ export default function Home({ technologies }) {
             exercitationem incidunt vel deleniti officiis numquam, esse qui ab libero dolores dignissimos minus omnis tempore quisquam quo cumque! Architecto tenetur, reiciendis quia ipsum,
             itaque error voluptatibus cumque a ad eveniet beatae omnis doloremque officia optio.
             Eius quia adipisci tempore sunt fugit unde non veritatis nostrum nihil accusamus velit veniam dicta blanditiis amet suscipit eligendi sed temporibus voluptatem earum reprehenderit animi, libero harum explicabo quas? Corporis laborum cumque asperiores!
-          </p>
+          </p> */}
         </div>
       </div>
 
