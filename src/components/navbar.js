@@ -38,6 +38,7 @@ export const Navbar = () => {
                 </button>
                 <div className="navbar-collapse collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav ms-auto">
+
                         <li className="nav-item">
                             <Link href="/">
                                 <a className="nav-link active" aria-current="page">
@@ -54,9 +55,18 @@ export const Navbar = () => {
                             </Link>
                         </li>
 
+                        <li className="nav-item">
+                            <Link href={variables.isSpanish ? "https://drive.google.com/file/d/18ksqLS4mP8V-Bo72o9yhXVQzspRnEAGd/view?usp=sharing" : "https://drive.google.com/file/d/1JfjWmVDsYN9O-Y9Wf39ZTMsOGRRwhzhm/view?usp=sharing"}>
+                                <a target="_blank" className="nav-link active" aria-current="page">
+                                    {variables.isSpanish ? "Descargar CV" : "Download CV"}
+                                </a>
+                            </Link>
+                        </li>
+
+
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {variables.isSpanish ? "Lenguaje" : "Language"}
+                                {variables.isSpanish ? "Lenguaje" : "Language"}
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><div onClick={() => setLanguage("esp")} role="button" className='m-1'><img className='img img-fluid flag-icon' src="/spain.png" alt="" />{variables.isSpanish ? "Español" : "Spanish"}</div></li>

@@ -27,7 +27,7 @@ a {
 }
 
 .banner-foto {
-  height: 10em;
+  height: 85%;
   width: 100%;
   object-fit: cover;
   border: solid black 0.1em;
@@ -60,3 +60,15 @@ a {
 }
 
 
+.profile-photo {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+
+.project-card-img {
+  height: 14em;
+  width: 100%;
+}
