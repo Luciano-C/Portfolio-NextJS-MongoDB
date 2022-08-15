@@ -38,14 +38,14 @@ const Projects = ({ projects }) => {
               })}
             </ul>
           </div>
-          <button className='btn btn-primary' onClick={applyFilters}>Filter</button>
         </div>
       </div>
 
 
       <div className="row">
-        <div className="col-2">
+        <div className="col-2 d-none d-lg-flex flex-column align-items-center" style={{ border: "solid 1px white" }}>
           <Filter />
+          <button className='btn btn-primary' onClick={applyFilters}>Filter</button>
         </div>
         <div className="col-10">
           <ul className='d-flex row align-items-center justify-content-start'>

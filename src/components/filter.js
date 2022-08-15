@@ -21,7 +21,7 @@ export const Filter = () => {
 
 
     return (
-        <form style={{ border: "solid 1px white" }} className="" onSubmit={handleSubmit}>
+        <form className="" onSubmit={handleSubmit}>
             <h2 className='ms-3'>Filtros</h2>
             <fieldset>
                 <legend className='ms-3'>Lenguajes</legend>
@@ -30,7 +30,7 @@ export const Filter = () => {
                         return (
                             <div className='d-flex justify-content-between' key={i}>
                                 <label htmlFor={x}>{x}</label>
-                                <input type="checkbox" name={x} onChange={handleChange} className="me-5"/>
+                                <input type="checkbox" name={x} onChange={handleChange} className="me-5 ms-5"/>
                             </div>
                         )
                     })}
