@@ -16,12 +16,18 @@ export const Filter = ({ filterFunction }) => {
             actions.addFilter(e.target.name);
         } else {
             actions.removeFilter(e.target.name);
+
         }
+    }
+
+    const handleRemove = (e) => {
+        e.preventDefault();
+        actions.removeAllFilters();
     }
 
 
     return (
-        
+
         <form className="d-flex flex-column justify-content-center" onSubmit={handleSubmit}>
             <h2 className='ms-3'>Filtros</h2>
             <fieldset>
@@ -31,7 +37,7 @@ export const Filter = ({ filterFunction }) => {
                         return (
                             <div className='d-flex justify-content-between' key={i}>
                                 <label htmlFor={x}>{x}</label>
-                                <input type="checkbox" name={x} onChange={handleChange} className="me-5 ms-5" />
+                                <input type="checkbox" name={x} onChange={handleChange} checked={variables.filters.includes(x)} className="me-5 ms-5" />
                             </div>
                         )
                     })}
@@ -46,13 +52,17 @@ export const Filter = ({ filterFunction }) => {
                         return (
                             <div className='d-flex justify-content-between' key={i}>
                                 <label htmlFor={x}>{x}</label>
-                                <input type="checkbox" name={x} onChange={handleChange} className="me-5" />
+                                <input type="checkbox" name={x} onChange={handleChange} checked={variables.filters.includes(x)} className="me-5" />
                             </div>
                         )
                     })}
                 </ul>
             </fieldset>
-            <button className='btn btn-primary w-50 align-self-center' role="submit">Filtrar</button>
+            <div className='d-flex'>
+                <button className='btn btn-primary w-50 align-self-center mt-2 mb-3 me-2 ms-2' role="submit">Filtrar</button>
+                <button className='btn btn-primary w-50 align-self-center mt-2 mb-3' onClick={handleRemove}>Limpiar</button>
+            </div>
+
         </form>
 
 

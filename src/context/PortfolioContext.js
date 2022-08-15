@@ -23,6 +23,10 @@ export const PortfolioProvider = ({ children }) => {
         setFilters(filters.filter(x => x!== filter));
     }
 
+    const removeAllFilters = () => {
+        setFilters([]);
+    }
+
     const toggleLanguage = () => {
         setIsSpanish( isSpanish ? false : true);
         return;
@@ -37,7 +41,8 @@ export const PortfolioProvider = ({ children }) => {
     const actions = {
         addFilter,
         removeFilter,
-        toggleLanguage
+        toggleLanguage,
+        removeAllFilters
     }
 
     return (
