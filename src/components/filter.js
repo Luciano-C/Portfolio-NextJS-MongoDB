@@ -2,13 +2,13 @@ import React from 'react'
 import { tags } from '../utils/tags'
 import { usePortfolioContext } from '../context/PortfolioContext'
 
-export const Filter = () => {
+export const Filter = ({ filterFunction }) => {
 
     const { variables, actions } = usePortfolioContext();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("hola")
+        filterFunction();
     }
 
     const handleChange = (e) => {
@@ -21,7 +21,8 @@ export const Filter = () => {
 
 
     return (
-        <form className="" onSubmit={handleSubmit}>
+        
+        <form className="d-flex flex-column justify-content-center" onSubmit={handleSubmit}>
             <h2 className='ms-3'>Filtros</h2>
             <fieldset>
                 <legend className='ms-3'>Lenguajes</legend>
@@ -30,7 +31,7 @@ export const Filter = () => {
                         return (
                             <div className='d-flex justify-content-between' key={i}>
                                 <label htmlFor={x}>{x}</label>
-                                <input type="checkbox" name={x} onChange={handleChange} className="me-5 ms-5"/>
+                                <input type="checkbox" name={x} onChange={handleChange} className="me-5 ms-5" />
                             </div>
                         )
                     })}
@@ -45,13 +46,16 @@ export const Filter = () => {
                         return (
                             <div className='d-flex justify-content-between' key={i}>
                                 <label htmlFor={x}>{x}</label>
-                                <input type="checkbox" name={x} onChange={handleChange} className="me-5"/>
+                                <input type="checkbox" name={x} onChange={handleChange} className="me-5" />
                             </div>
                         )
                     })}
                 </ul>
             </fieldset>
+            <button className='btn btn-primary w-50 align-self-center' role="submit">Filtrar</button>
         </form>
+
+
     )
 }
 
