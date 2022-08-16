@@ -13,7 +13,7 @@ export const Footer = () => {
   const { variables } = usePortfolioContext();
 
   return (
-    <div className='bg-black text-white h-100 w-100 d-inline-block'>
+    <div className='bg-black text-white h-100 w-100 d-inline-block h-100'>
       <h2 className='m-3'>{variables.isSpanish ? "Contacto" : "Contact"}</h2>
       <p className='m-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis earum quae aut tenetur,
          facilis a repudiandae est voluptates labore id nobis nulla, dolorum eveniet voluptate. 
