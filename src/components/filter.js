@@ -29,9 +29,9 @@ export const Filter = ({ filterFunction }) => {
     return (
 
         <form className="d-flex flex-column justify-content-center" onSubmit={handleSubmit}>
-            <h2 className='ms-3'>Filtros</h2>
+            <h2 className='ms-3'>{variables.isSpanish ? "Filtros" : "Filters"}</h2>
             <fieldset>
-                <legend className='ms-3'>Lenguajes</legend>
+                <legend className='ms-3 h5'>{variables.isSpanish ? "Lenguajes" : "Languages"}</legend>
                 <ul>
                     {tags.languages.map((x, i) => {
                         return (
@@ -46,7 +46,7 @@ export const Filter = ({ filterFunction }) => {
 
 
             <fieldset>
-                <legend className='ms-3'>Herramientas</legend>
+                <legend className='ms-3 h5'>{variables.isSpanish ? "Herramientas" : "Tools"}</legend>
                 <ul>
                     {tags.tools.map((x, i) => {
                         return (
@@ -59,8 +59,8 @@ export const Filter = ({ filterFunction }) => {
                 </ul>
             </fieldset>
             <div className='d-flex'>
-                <button className='btn btn-primary w-50 align-self-center mt-2 mb-3 me-2 ms-2' role="submit">Filtrar</button>
-                <button className='btn btn-primary w-50 align-self-center mt-2 mb-3' onClick={handleRemove}>Limpiar</button>
+                <button className='btn btn-primary w-50 align-self-center mt-2 mb-3 me-2 ms-2' role="submit">{variables.isSpanish ? "Filtrar" : "Filter"}</button>
+                <button className='btn btn-primary w-50 align-self-center mt-2 mb-3' onClick={handleRemove}>{variables.isSpanish ? "Limpiar" : "Clear"}</button>
             </div>
 
         </form>
