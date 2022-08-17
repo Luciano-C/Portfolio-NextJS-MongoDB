@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 import { Carousel } from '../../components/carousel'
 import { usePortfolioContext } from '../../context/PortfolioContext'
+import Link from 'next/link'
 
 const ProjectDetail = ({ project }) => {
 
@@ -18,10 +19,31 @@ const ProjectDetail = ({ project }) => {
       </div>
       <div className="row">
         <div className="col d-flex flex-column justify-content-center align-items-center">
-          <h1>{variables.isSpanish ? project.nombre : project.name}</h1>
-          <p style={{height: "30vh"}}>{variables.isSpanish ? project.descripcion : project.description}</p>
-          <span>Tags: {project.tags.join(", ")}.</span>
-          <span>Link: {project.link}</span>
+          <h1 className='mt-2'>{variables.isSpanish ? project.nombre : project.name}</h1>
+          <div className='col'>
+            {
+              variables.isSpanish
+                ? project.descripcion.split("\n").map((x, i) => {
+                  return (
+                    <p className="mt-0 mb-0" key={i}>{x}</p>
+                  )
+                })
+                : project.description.split("\n").map((x, i) => {
+                  return (
+                    <p className="mt-0 mb-0" key={i}>{x}</p>
+                  )
+                })
+            }
+          </div>
+          <span className='mt-5'>Tags: {project.tags.join(", ")}.</span>
+        </div>
+      </div>
+      <div className="row mt-3 pb-2">
+        <div className='col-12 d-flex justify-content-center'>
+          <span className='me-3'>Link:</span>
+          <Link href={project.link}>
+            <a target="_blank">{project.nombre}</a>
+          </Link>
         </div>
       </div>
     </div>

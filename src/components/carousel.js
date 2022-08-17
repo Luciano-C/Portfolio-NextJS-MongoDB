@@ -3,17 +3,18 @@ import React from 'react'
 export const Carousel = ({ project }) => {
     return (
 
-        <div id="carouselExampleControls" className="carousel slide w-50" data-bs-ride="carousel" style={{border: "solid white 1px"}}>
+        <div id="carouselExampleControls" className="carousel slide w-100" data-bs-ride="carousel" style={{ border: "solid white 1px" }}>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src={project.imagenes.carousel_1} className="d-block carousel-img" alt="..." />
+                    <img src={project.imagen_card} className="d-block carousel-img" alt="..." />
                 </div>
-                <div className="carousel-item">
-                    <img src={project.imagenes.carousel_2} className="d-block carousel-img" alt="..." />
-                </div>
-                <div className="carousel-item">
-                    <img src={project.imagenes.carousel_2} className="d-block carousel-img" alt="..." />
-                </div>
+                {project.imagenes_carousel.map((x, i) => {
+                    return (
+                        <div key={i} className="carousel-item">
+                            <img src={x} className="d-block carousel-img" alt="..." />
+                        </div>
+                    )
+                })}
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>

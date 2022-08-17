@@ -69,10 +69,10 @@ const Projects = ({ projects, error }) => {
               return (
                 <div className="col-md-3 m-2" key={x._id}>
                   <div className="card bg-black" style={{ width: "90%" }}>
-                    <img src={x.imagenes.card} className="card-img-top project-card-img" alt="..." />
+                    <img src={x.imagen_card} className="card-img-top project-card-img" alt="..." />
                     <div className="card-body d-flex flex-column align-items-center">
                       <h5 className="card-title">{variables.isSpanish ? x.nombre : x.name}</h5>
-                      <span className="card-text">Tags: {x.tags.join(", ")}.</span>
+                      <span className="card-text text-center">Tags: {x.tags.join(", ")}.</span>
                       <button className='btn btn-primary mt-1 w-50' onClick={() => { buttonClick(x) }}>{variables.isSpanish ? "Leer más" : "Read more"}</button>
                     </div>
                   </div>

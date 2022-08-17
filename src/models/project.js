@@ -36,14 +36,13 @@ const projectSchema = new Schema({
         maxlength: [2000, "Description must be less than 2000 characters"]
     },
 
-    imagenes: {
-        type: {
-            card: { type: String },
-            carousel_1: { type: String },
-            carousel_2: { type: String },
-            carousel_3: { type: String }
-        }
-        ,
+    imagen_card: {
+        type: String,
+        required: true,
+    },
+
+    imagenes_carousel: {
+        type: [String],
         required: true,
     },
     tags: {
