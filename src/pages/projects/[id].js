@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import { Carousel } from '../../components/carousel'
@@ -9,6 +9,10 @@ const ProjectDetail = ({ project }) => {
 
   const router = useRouter();
   const { variables, actions } = usePortfolioContext();
+
+  useEffect(() => {
+    actions.removeAllFilters();
+  }, []);
 
   return (
     <div className='container-fluid text-white'>

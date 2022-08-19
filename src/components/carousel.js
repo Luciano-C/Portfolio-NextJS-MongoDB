@@ -3,7 +3,7 @@ import React from 'react'
 export const Carousel = ({ project }) => {
     return (
 
-        <div id="carouselExampleControls" className="carousel slide w-100" data-bs-ride="carousel" style={{ border: "solid white 1px" }}>
+        <div id="carouselExampleControls" className="carousel slide w-100" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active">
                     <img src={project.imagen_card} className="d-block carousel-img" alt="..." />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Filter } from '../../components/filter'
 import { usePortfolioContext } from '../../context/PortfolioContext'
@@ -27,8 +27,12 @@ const Projects = ({ projects, error }) => {
 
   const buttonClick = (project) => {
     router.push(`/projects/${project._id}`);
-    actions.removeAllFilters();
   }
+
+  useEffect(() => {
+    actions.removeAllFilters();
+  }, []);
+
 
   if (error) return <Error statusCode={error.statusCode} title={error.statusText} />
 
@@ -36,8 +40,8 @@ const Projects = ({ projects, error }) => {
     <div className='container-fluid text-white p-0'>
 
       <div className="row">
-        <div className="col d-flex flex-column align-items-center">
-          <h1>{variables.isSpanish ? "Proyectos" : "Projects"}</h1>
+        <div className="col-md-9 offset-md-2 d-flex flex-column align-items-center justify-content-center">
+          <h1 className='w-100 text-center'>{variables.isSpanish ? "Proyectos" : "Projects"}</h1>
           <p className='ms-2 me-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, doloremque consectetur perferendis explicabo similique dolorem?</p>
           <div className="col d-lg-none">
             <DropDownFilter filterFunction={applyFilters} />
@@ -67,13 +71,13 @@ const Projects = ({ projects, error }) => {
           <ul className='d-flex row align-items-center justify-content-start'>
             {filteredProjects.map(x => {
               return (
-                <div className="col-md-3 m-2" key={x._id}>
-                  <div className="card bg-black" style={{ width: "90%" }}>
-                    <img src={x.imagen_card} className="card-img-top project-card-img" alt="..." />
-                    <div className="card-body d-flex flex-column align-items-center">
+                <div className="col-md-3 mt-2 mb-2 ms-3 d-flex justify-content-center ms-md-5" key={x._id}>
+                  <div className="card bg-black" style={{ width: "90%", height: "26rem",  border: "solid 2px blue"  }}>
+                    <img src={x.imagen_card} className="card-img-top project-card-img pe-3 ps-3 pt-3 pb-3" alt="..." />
+                    <div className="card-body bg-dark d-flex flex-column align-items-center justify-content-between">
                       <h5 className="card-title">{variables.isSpanish ? x.nombre : x.name}</h5>
-                      <span className="card-text text-center">Tags: {x.tags.join(", ")}.</span>
-                      <button className='btn btn-primary mt-1 w-50' onClick={() => { buttonClick(x) }}>{variables.isSpanish ? "Leer más" : "Read more"}</button>
+                      <span className="card-text text-center h-25">Tags: {x.tags.join(", ")}.</span>
+                      <button className='btn btn-primary w-50' onClick={() => { buttonClick(x) }}>{variables.isSpanish ? "Leer más" : "Read more"}</button>
                     </div>
                   </div>
                 </div>

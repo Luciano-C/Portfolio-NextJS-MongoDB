@@ -1,11 +1,16 @@
 import { usePortfolioContext } from "../context/PortfolioContext"
 import axios from "axios"
+import { useEffect } from "react";
 
 
 
 export default function Home({ technologies }) {
 
   const { variables, actions } = usePortfolioContext();
+
+  useEffect(() => {
+    actions.removeAllFilters();
+  }, []);
 
   return (
     <div className="container-fluid text-white p-0">
