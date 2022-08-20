@@ -23,7 +23,7 @@ const ProjectDetail = ({ project }) => {
       </div>
       <div className="row">
         <div className="col d-flex flex-column justify-content-center align-items-center">
-          <h1 className='mt-2'>{variables.isSpanish ? project.nombre : project.name}</h1>
+          <h1 className='mt-2 mb-4'>{variables.isSpanish ? project.nombre : project.name}</h1>
           <div className='col'>
             {
               variables.isSpanish

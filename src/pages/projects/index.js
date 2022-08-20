@@ -33,7 +33,7 @@ const Projects = ({ projects, error }) => {
     actions.removeAllFilters();
   }, []);
 
-
+ 
   if (error) return <Error statusCode={error.statusCode} title={error.statusText} />
 
   return (
@@ -44,7 +44,7 @@ const Projects = ({ projects, error }) => {
           <h1 className='w-100 text-center'>{variables.isSpanish ? "Proyectos" : "Projects"}</h1>
           <p className='ms-2 me-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, doloremque consectetur perferendis explicabo similique dolorem?</p>
           <div className="col d-lg-none">
-            <DropDownFilter filterFunction={applyFilters} />
+            <DropDownFilter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} />
           </div>
           {/* <div className="d-flex align-items-center w-50" style={{border: "solid white 1px"}}>
             <span className='ms-5'>Filtros:</span>
@@ -64,7 +64,7 @@ const Projects = ({ projects, error }) => {
 
       <div className="row">
         <div className="col-2 d-none d-lg-block">
-          <Filter filterFunction={applyFilters} />
+          <Filter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} />
         </div>
 
         <div className="col-10">

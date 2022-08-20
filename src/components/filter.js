@@ -2,7 +2,7 @@ import React from 'react'
 import { tags } from '../utils/tags'
 import { usePortfolioContext } from '../context/PortfolioContext'
 
-export const Filter = ({ filterFunction }) => {
+export const Filter = ({ filterFunction, projects, setFilteredProjects }) => {
 
     const { variables, actions } = usePortfolioContext();
 
@@ -23,6 +23,9 @@ export const Filter = ({ filterFunction }) => {
     const handleRemove = (e) => {
         e.preventDefault();
         actions.removeAllFilters();
+        setFilteredProjects(projects);
+        // Retira los bordes del boton después del click
+        e.target.blur();
     }
 
 
@@ -59,7 +62,7 @@ export const Filter = ({ filterFunction }) => {
                 </ul>
             </fieldset>
             <div className='d-flex'>
-                <button className='btn btn-primary w-50 align-self-center mt-2 mb-3 me-2 ms-2' role="submit">{variables.isSpanish ? "Filtrar" : "Filter"}</button>
+                <button className='btn btn-primary w-50 align-self-center mt-2 mb-3 me-2 ms-2' role="submit" onClick={(e) => { e.target.blur() }}>{variables.isSpanish ? "Filtrar" : "Filter"}</button>
                 <button className='btn btn-primary w-50 align-self-center mt-2 mb-3' onClick={handleRemove}>{variables.isSpanish ? "Limpiar" : "Clear"}</button>
             </div>
 
