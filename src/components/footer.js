@@ -15,10 +15,14 @@ export const Footer = () => {
   return (
     <div className='bg-black text-white h-100 w-100 d-inline-block h-100'>
       <h2 className='m-3'>{variables.isSpanish ? "Contacto" : "Contact"}</h2>
-      <p className='m-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis earum quae aut tenetur,
-         facilis a repudiandae est voluptates labore id nobis nulla, dolorum eveniet voluptate. 
-         Exercitationem, veniam! Voluptates, adipisci!</p>
-      
+      <p className='m-3'>
+        {
+          variables.isSpanish
+            ? "Si tienes algún proyecto interesante en el cual podríamos colaborar, quieres saber más acerca de mi experiencia / proyectos en que he trabajado o si sencillamente quieres saludar no dudes en contactarme!"
+            : "If you have an interesting project in which we could work together, want to know more about my experience / projects I have worked on or you just want to say hi, don't hesitate to reach out to me!"
+        }
+      </p>
+
       <div className='d-flex m-2 justify-content-around align-items-center row'>
         <div className='d-flex align-items-center col-md-2'>
           <Link href="https://github.com/Luciano-C">

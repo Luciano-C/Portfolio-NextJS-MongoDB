@@ -4,10 +4,10 @@ import { Filter } from '../../components/filter'
 import { usePortfolioContext } from '../../context/PortfolioContext'
 import { DropDownFilter } from '../../components/dropDownFilter'
 import { useRouter } from 'next/router'
-import Error from "next/error"
 
 
-const Projects = ({ projects, error }) => {
+
+const Projects = ({ projects }) => {
 
   const { variables, actions } = usePortfolioContext();
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -33,31 +33,25 @@ const Projects = ({ projects, error }) => {
     actions.removeAllFilters();
   }, []);
 
- 
-  if (error) return <Error statusCode={error.statusCode} title={error.statusText} />
+
+
 
   return (
     <div className='container-fluid text-white p-0'>
 
       <div className="row">
         <div className="col-md-9 offset-md-2 d-flex flex-column align-items-center justify-content-center">
-          <h1 className='w-100 text-center'>{variables.isSpanish ? "Proyectos" : "Projects"}</h1>
-          <p className='ms-2 me-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, doloremque consectetur perferendis explicabo similique dolorem?</p>
+          <h1 className='w-100 text-center mt-3'>{variables.isSpanish ? "Proyectos" : "Projects"}</h1>
+          <p className='ms-2 me-2'>
+            {
+              variables.isSpanish
+                ? "Aquí encontrarás algunos de los proyectos en los que he trabajado. En \"Leer más\" podrás ver algunas capturas de los proyectos, una breve descripción y un link al repositorio GitHub. También hay un filtro que permite mostrar sólo los proyectos que involucran las tecnologías seleccionadas."
+                : "Here you will find some of the projects I have worked on. In \"Read more\" you will be able to see some screenshots, a brief description and a link to the GitHub repository. There is also a filter that allows to show only the projects in which the selected technologies are involved. "
+            }
+          </p>
           <div className="col d-lg-none">
             <DropDownFilter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} />
           </div>
-          {/* <div className="d-flex align-items-center w-50" style={{border: "solid white 1px"}}>
-            <span className='ms-5'>Filtros:</span>
-            <ul>
-              {variables.filters.map((x, i) => {
-                return (
-                  <button className='filter-button btn btn-primary me-1 mb-1' key={i}>
-                    {x}
-                  </button>
-                )
-              })}
-            </ul>
-          </div> */}
         </div>
       </div>
 
@@ -72,7 +66,7 @@ const Projects = ({ projects, error }) => {
             {filteredProjects.map(x => {
               return (
                 <div className="col-md-3 mt-2 mb-2 ms-3 d-flex justify-content-center ms-md-5" key={x._id}>
-                  <div className="card bg-black" style={{ width: "90%", height: "26rem",  border: "solid 2px blue"  }}>
+                  <div className="card bg-black" style={{ width: "90%", height: "26rem", border: "solid 2px blue" }}>
                     <img src={x.imagen_card} className="card-img-top project-card-img pe-3 ps-3 pt-3 pb-3" alt="..." />
                     <div className="card-body bg-dark d-flex flex-column align-items-center justify-content-between">
                       <h5 className="card-title">{variables.isSpanish ? x.nombre : x.name}</h5>
@@ -96,8 +90,7 @@ const Projects = ({ projects, error }) => {
 export default Projects
 
 export const getServerSideProps = async (context) => {
-  const { data: projects } = await axios.get("http://localhost:3000/api/projects");
-
+  const { data: projects } = await axios.get(`${process.env.BACK_END}/projects`);
   return {
     props: {
       projects

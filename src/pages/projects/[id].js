@@ -4,8 +4,9 @@ import axios from 'axios'
 import { Carousel } from '../../components/carousel'
 import { usePortfolioContext } from '../../context/PortfolioContext'
 import Link from 'next/link'
+import Error from 'next/error'
 
-const ProjectDetail = ({ project }) => {
+const ProjectDetail = ({ project, error }) => {
 
   const router = useRouter();
   const { variables, actions } = usePortfolioContext();
@@ -14,6 +15,12 @@ const ProjectDetail = ({ project }) => {
     actions.removeAllFilters();
   }, []);
 
+  if (error) return (
+    <div className='text-white'>
+      <Error statusCode={error.statusCode} title={error.statusText} backgroundColor='red'/>
+    </div>
+
+  )
   return (
     <div className='container-fluid text-white'>
       <div className="row">
@@ -61,15 +68,31 @@ export const getServerSideProps = async (context) => {
 
   const { query: { id } } = context;
 
-  const res = await axios.get(`http://localhost:3000/api/projects/${id}`)
+  try {
+    const res = await axios.get(`${process.env.BACK_END}/projects/${id}`)
+    const project = res.data;
 
-  const project = res.data;
-
-
-  return {
-    props: {
-      project
+    return {
+      props: {
+        project
+      }
+    }
+  } catch (err) {
+    return {
+      props: {
+        error: {
+          statusCode: err.response.status,
+          statusText: err.response.data.msg
+        }
+      }
     }
   }
+
+
+
+
+
+
+
 
 } 
