@@ -70,6 +70,7 @@ a {
 .project-card-img {
   height: 14em;
   width: 100%;
+  object-fit: contain;
 }
 
 

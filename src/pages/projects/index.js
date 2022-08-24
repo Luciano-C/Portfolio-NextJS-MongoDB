@@ -65,7 +65,7 @@ const Projects = ({ projects }) => {
           <ul className='d-flex row align-items-center justify-content-start'>
             {filteredProjects.map(x => {
               return (
-                <div className="col-md-3 mt-2 mb-2 ms-3 d-flex justify-content-center ms-md-5" key={x._id}>
+                <div className="col-lg-3 col-md-12 mt-2 mb-2 ms-3 d-flex justify-content-center ms-md-5" key={x._id}>
                   <div className="card bg-black" style={{ width: "90%", height: "26rem", border: "solid 2px blue" }}>
                     <img src={x.imagen_card} className="card-img-top project-card-img pe-3 ps-3 pt-3 pb-3" alt="..." />
                     <div className="card-body bg-dark d-flex flex-column align-items-center justify-content-between">
