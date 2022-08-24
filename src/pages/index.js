@@ -23,7 +23,8 @@ export default function Home({ technologies }) {
                 ? "https://res.cloudinary.com/dpfjfmvzs/image/upload/v1659825429/Portfolio/General/Banner_Portfolio_esp_paafmf.png"
                 : "https://res.cloudinary.com/dpfjfmvzs/image/upload/v1659825433/Portfolio/General/Banner_Portfolio_ing_nmljiw.png"
             }
-            className="banner-foto img "
+            className="banner-foto img"
+            alt="..."
           />
         </div>
       </div>
