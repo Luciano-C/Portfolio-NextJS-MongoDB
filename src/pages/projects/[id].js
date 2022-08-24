@@ -69,7 +69,7 @@ export const getServerSideProps = async (context) => {
   const { query: { id } } = context;
 
   try {
-    const res = await axios.get(`http://localhost:3000/api/projects/${id}`)
+    const res = await axios.get(`${process.env.BACK_END}/projects/${id}`)
     const project = res.data;
 
     return {

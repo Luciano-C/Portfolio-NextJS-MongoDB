@@ -177,7 +177,8 @@ export default function Home({ technologies }) {
 
 export const getServerSideProps = async (context) => {
 
-  const { data: technologies } = await axios.get(`http://localhost:3000/api/technologies`);
+  const { data: technologies } = await axios.get(`${process.env.BACK_END}/technologies`);
+  
 
   return {
     props: {
