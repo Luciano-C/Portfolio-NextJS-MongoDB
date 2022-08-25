@@ -61,7 +61,7 @@ const Projects = ({ projects }) => {
           <Filter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} />
         </div>
 
-        <div className="col-lg-12 col-xl-10 col-md-10 offset-md-1 offset-xl-0">
+        <div className="col-lg-12 col-xl-10 col-md-10 offset-md-1 offset-xl-0 pe-5 ps-3">
           <ul className='d-flex row align-items-center justify-content-start'>
             {filteredProjects.map(x => {
               return (
