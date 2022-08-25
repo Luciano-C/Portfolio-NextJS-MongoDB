@@ -45,7 +45,7 @@ export default function Home({ technologies }) {
 
       <div className="row">
         <div className="col">
-          <h2 className="ms-3">
+          <h2 className="ms-3 mt-3">
             {variables.isSpanish ? "Acerca de mí" : "About me"}
           </h2>
           <div className="card mb-3 bg-transparent border-0" style={{ maxWidth: "98%" }}>
