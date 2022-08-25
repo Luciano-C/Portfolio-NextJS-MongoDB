@@ -97,7 +97,7 @@ export default function Home({ technologies }) {
                     {
                       variables.isSpanish
                         ? "Mis lenguajes de programación favoritos son Python y Javascript."
-                        : "My favorite programming languages are Python and Javascript"
+                        : "My favorite programming languages are Python and Javascript."
                     }
                   </p>
                   <p>
