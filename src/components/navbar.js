@@ -56,7 +56,7 @@ export const Navbar = () => {
                         </li>
 
                         <li className="nav-item">
-                            <Link href={variables.isSpanish ? "https://drive.google.com/file/d/18ksqLS4mP8V-Bo72o9yhXVQzspRnEAGd/view?usp=sharing" : "https://drive.google.com/file/d/1JfjWmVDsYN9O-Y9Wf39ZTMsOGRRwhzhm/view?usp=sharing"}>
+                            <Link href={variables.isSpanish ? "https://drive.google.com/file/d/1IOm3PT3oOJR3HI_tPwl_gYc1PNDfk528/view?usp=sharing" : "https://drive.google.com/file/d/106y4A2tdG6QbiiFX8kvAz_0E0JB8Hsua/view?usp=sharing"}>
                                 <a target="_blank" className="nav-link active" aria-current="page">
                                     {variables.isSpanish ? "Descargar CV" : "Download CV"}
                                 </a>
