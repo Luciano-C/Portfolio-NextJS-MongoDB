@@ -66,7 +66,7 @@ export const Navbar = () => {
 
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                {variables.isSpanish ? "Lenguaje" : "Language"}
+                                {variables.isSpanish ? "Idioma" : "Language"}
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><div onClick={() => setLanguage("esp")} role="button" className='m-1'><img className='img img-fluid flag-icon' src="/spain.png" alt="" />{variables.isSpanish ? "Español" : "Spanish"}</div></li>

@@ -36,7 +36,7 @@ export default function Home({ technologies }) {
           </h2>
           <p className="ms-3 me-3" style={{ height: "7em" }}>{
             variables.isSpanish
-              ? "En esta página encontrarás información acerca de mí y de los proyectos en los que he trabajado. En la barra de navegación están las opciones de visitar la página con los proyectos, descargar mi CV en pdf o cambiar el lenguaje de la página."
+              ? "En esta página encontrarás información acerca de mí y de los proyectos en los que he trabajado. En la barra de navegación están las opciones de visitar la página con los proyectos, descargar mi CV en pdf o cambiar el idioma de la página."
               : "In this page you will find information about me and the projects I have worked on. With the navigation bar you can visit the page with the projects, download my CV or change the language of the website. "
           }
           </p>
