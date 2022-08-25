@@ -23,27 +23,28 @@ export const Footer = () => {
         }
       </p>
 
-      <div className='d-flex m-2 justify-content-around align-items-center row'>
-        <div className='d-flex align-items-center col-md-2'>
+      <div className='d-flex m-2 justify-content-around align-items-center '>
+        <div className='d-flex align-items-center col-md-2 ms-2'>
           <Link href="https://github.com/Luciano-C">
             <a target="_blank" className='text-white'><FontAwesomeIcon icon={faGithub} className="h1 mt-2" /></a>
           </Link>
-          <span className='ms-2'>Github</span>
+          {/* <span className='ms-2'>Github</span> */}
         </div>
 
 
-        <div className='d-flex align-items-center col-md-2'>
+        <div className='d-flex align-items-center col-md-2 ms-2'>
           <Link href="https://www.linkedin.com/in/luciano-cabrales-ferrer/" >
             <a target="_blank" className='text-white'><FontAwesomeIcon icon={faLinkedin} className="h1 mt-2" /></a>
           </Link>
-          <span className='ms-2'>LinkedIn</span>
+          {/* <span className='ms-2'>LinkedIn</span> */}
         </div>
+        
 
-        <div className='d-flex align-items-center col-md-2'>
+        <div className='d-flex align-items-center col-md-1 ms-2'>
           <Link href="mailto:luciano.cabrales@gmail.com" >
             <a className='text-white'><FontAwesomeIcon icon={faEnvelope} className="h1 mt-2" /></a>
           </Link>
-          <span className='ms-2'>luciano.cabrales@gmail.com</span>
+          {/* <span className='ms-2'>luciano.cabrales@gmail.com</span> */}
         </div>
 
       </div>
