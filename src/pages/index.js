@@ -125,7 +125,7 @@ export default function Home({ technologies }) {
           <p className="m-3">
             {
               variables.isSpanish
-                ? "Estas son algunas de las tecnologías con las que he tenido trabajado"
+                ? "Estas son algunas de las tecnologías con las que he trabajado."
                 : "These are some of the technologies I have worked with."
             }
           </p>
