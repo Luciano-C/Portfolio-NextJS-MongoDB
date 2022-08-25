@@ -49,7 +49,7 @@ const Projects = ({ projects }) => {
                 : "Here you will find some of the projects I have worked on. In \"Read more\" you will be able to see some screenshots, a brief description and a link to the GitHub repository. There is also a filter that allows to show only the projects in which the selected technologies are involved. "
             }
           </p>
-          <div className="col d-lg-none">
+          <div className="col d-xl-none">
             <DropDownFilter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} />
           </div>
         </div>
@@ -57,15 +57,15 @@ const Projects = ({ projects }) => {
 
 
       <div className="row">
-        <div className="col-2 d-none d-lg-block">
+        <div className="col-2 d-none d-xl-block">
           <Filter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} />
         </div>
 
-        <div className="col-10">
+        <div className="col-lg-12 col-xl-10 col-md-10 offset-md-1 offset-xl-0">
           <ul className='d-flex row align-items-center justify-content-start'>
             {filteredProjects.map(x => {
               return (
-                <div className="col-lg-3 col-md-12 mt-2 mb-2 ms-3 d-flex justify-content-center ms-md-5" key={x._id}>
+                <div className="col-xl-3 col-lg-5 col-md-12 mt-2 mb-2 ms-0  d-flex justify-content-center" key={x._id} >
                   <div className="card bg-black" style={{ width: "90%", height: "26rem", border: "solid 2px blue" }}>
                     <img src={x.imagen_card} className="card-img-top project-card-img pe-3 ps-3 pt-3 pb-3" alt="..." />
                     <div className="card-body bg-dark d-flex flex-column align-items-center justify-content-between">
