@@ -57,15 +57,15 @@ const Projects = ({ projects }) => {
 
 
       <div className="row">
-        <div className="col-2 d-none d-xxl-block">
+        <div className="col-xxl-2 d-none d-xxl-block">
           <Filter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} />
         </div>
 
-        <div className="col-lg-12 col-xxl-10 col-xl-12 col-md-10 offset-md-1 offset-xl-0 pe-5 ps-3">
-          <ul className='d-flex row align-items-center justify-content-start'>
+        <div className="col-lg-10 col-xxl-10 col-xl-11 col-md-10 col-11 offset-md-1 offset-xl-0 pe-5 ps-3">
+          <ul className='d-flex row align-items-center justify-content-xxl-start justify-content-xl-start justify-content-center'>
             {filteredProjects.map(x => {
               return (
-                <div className="col-xl-3 col-lg-5 col-md-12 mt-2 mb-2 ms-0  d-flex justify-content-center" key={x._id} >
+                <div className="col-xl-3 col-lg-5 col-md-12 mt-2 mb-2 ms-4 ms-xxl-0 d-flex justify-content-center" key={x._id} >
                   <div className="card bg-black" style={{ width: "90%", height: "26rem", border: "solid 2px blue" }}>
                     <img src={x.imagen_card} className="card-img-top project-card-img pe-3 ps-3 pt-3 pb-3" alt="..." />
                     <div className="card-body bg-dark d-flex flex-column align-items-center justify-content-between">
