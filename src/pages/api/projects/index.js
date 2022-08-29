@@ -7,12 +7,12 @@ export default async function handler(req, res) {
     switch (req.method) {
         case "GET":
             try {
-                const projects = await Project.find();
+                const projects = await Project.find().sort({ index: "ascending" });
                 return res.status(200).json(projects);
             } catch (error) {
-                return res.status(500).json({error: error.message});
+                return res.status(500).json({ error: error.message });
             }
         default:
-            return res.status(400).json({msg: "This method is not supported"});
+            return res.status(400).json({ msg: "This method is not supported" });
     }
 }

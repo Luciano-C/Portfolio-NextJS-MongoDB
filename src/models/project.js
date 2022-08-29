@@ -2,6 +2,12 @@ import { Schema, model, models } from "mongoose";
 
 const projectSchema = new Schema({
 
+    index: {
+        type: Number,
+        required: [true, "Index is required"],
+        unique: false,
+    },
+    
     nombre: {
         type: String,
         // Con el arreglo manda "Nombre is required" cuando hay error

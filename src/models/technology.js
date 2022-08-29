@@ -1,6 +1,13 @@
 import { Schema, model, models } from "mongoose";
 
 const technologySchema = new Schema ({
+    
+    index: {
+        type: Number,
+        required: [true, "Index is required"],
+        unique: false,
+    },
+    
     name: {
         type: String,
         required: [true, "Name is required"],
