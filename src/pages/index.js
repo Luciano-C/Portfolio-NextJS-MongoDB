@@ -16,7 +16,7 @@ export default function Home({ technologies }) {
   return (
     <div className="container-fluid text-white p-0">
       <div className="row">
-        <div className="col d-flex flex-column justify-content-start align-items-center">
+        <div className="col d-flex flex-column justify-content-start align-items-center p-0">
           <img
             src={
               variables.isSpanish
