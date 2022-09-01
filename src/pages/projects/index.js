@@ -90,7 +90,8 @@ const Projects = ({ projects }) => {
 export default Projects
 
 export const getServerSideProps = async (context) => {
-  const { data: projects } = await axios.get(`${process.env.BACK_END}/projects`);
+  
+  const { data: projects } = await axios.get(`${process.env.BACK_END}/projects?api_key=${process.env.API_SECRET_KEY}`);
   return {
     props: {
       projects

@@ -177,7 +177,7 @@ export default function Home({ technologies }) {
 
 export const getServerSideProps = async (context) => {
 
-  const { data: technologies } = await axios.get(`${process.env.BACK_END}/technologies`);
+  const { data: technologies } = await axios.get(`${process.env.BACK_END}/technologies?api_key=${process.env.API_SECRET_KEY}`);
   
 
   return {
