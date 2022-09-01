@@ -4,11 +4,11 @@ import Project from "../../../models/project"
 dbConnect();
 
 export default async function handler(req, res) {
-    
+
     if (req.query.api_key !== process.env.API_SECRET_KEY) {
-        return res.status(401).json({msg: "You are not authorized to call this API."})
+        return res.status(401).json({ msg: "You are not authorized to call this API." })
     }
-    
+
     switch (req.method) {
         case "GET":
             try {
