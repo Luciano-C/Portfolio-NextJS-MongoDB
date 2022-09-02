@@ -26,6 +26,13 @@ const technologySchema = new Schema ({
         required: true,
         trim: true,
         maxlength: 10
+    },
+    
+    inFilter: {
+        type: String,
+        required: true,
+        trim: true,
+        maxlength: 10
     }
 
 }, {
