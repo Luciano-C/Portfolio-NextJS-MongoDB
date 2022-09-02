@@ -1,8 +1,7 @@
 import React from 'react'
-import { tags } from '../utils/tags'
 import { usePortfolioContext } from '../context/PortfolioContext'
 
-export const Filter = ({ filterFunction, projects, setFilteredProjects }) => {
+export const Filter = ({ filterFunction, projects, setFilteredProjects, technologies }) => {
 
     const { variables, actions } = usePortfolioContext();
 
@@ -36,11 +35,11 @@ export const Filter = ({ filterFunction, projects, setFilteredProjects }) => {
             <fieldset>
                 <legend className='ms-3 h5'>{variables.isSpanish ? "Lenguajes" : "Languages"}</legend>
                 <ul>
-                    {tags.languages.map((x, i) => {
+                    {technologies.filter(x => x.inFilter === "languages").map((x, i) => {
                         return (
                             <div className='d-flex justify-content-between' key={i}>
-                                <label htmlFor={x}>{x}</label>
-                                <input type="checkbox" name={x} onChange={handleChange} checked={variables.filters.includes(x)} className="me-5 ms-5" />
+                                <label htmlFor={x.name}>{x.name}</label>
+                                <input type="checkbox" name={x.name} onChange={handleChange} checked={variables.filters.includes(x.name)} className="me-5 ms-5" />
                             </div>
                         )
                     })}
@@ -51,11 +50,11 @@ export const Filter = ({ filterFunction, projects, setFilteredProjects }) => {
             <fieldset>
                 <legend className='ms-3 h5'>{variables.isSpanish ? "Herramientas" : "Tools"}</legend>
                 <ul>
-                    {tags.tools.map((x, i) => {
+                    {technologies.filter(x => x.inFilter === "tools").map((x, i) => {
                         return (
                             <div className='d-flex justify-content-between' key={i}>
-                                <label htmlFor={x}>{x}</label>
-                                <input type="checkbox" name={x} onChange={handleChange} checked={variables.filters.includes(x)} className="me-5" />
+                                <label htmlFor={x.name}>{x.name}</label>
+                                <input type="checkbox" name={x.name} onChange={handleChange} checked={variables.filters.includes(x.name)} className="me-5" />
                             </div>
                         )
                     })}

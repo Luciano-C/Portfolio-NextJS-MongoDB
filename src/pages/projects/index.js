@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 
 
 
-const Projects = ({ projects }) => {
+const Projects = ({ projects, technologies }) => {
 
   const { variables, actions } = usePortfolioContext();
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -50,7 +50,7 @@ const Projects = ({ projects }) => {
             }
           </p>
           <div className="col d-xxl-none">
-            <DropDownFilter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} />
+            <DropDownFilter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} technologies={technologies}/>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ const Projects = ({ projects }) => {
 
       <div className="row">
         <div className="col-xxl-2 d-none d-xxl-block">
-          <Filter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} />
+          <Filter filterFunction={applyFilters} projects={projects} setFilteredProjects={setFilteredProjects} technologies={technologies} />
         </div>
 
         <div className="col-lg-10 col-xxl-10 col-xl-11 col-md-10 col-11 offset-md-1 offset-xl-0 pe-5 ps-3">
@@ -92,9 +92,11 @@ export default Projects
 export const getServerSideProps = async (context) => {
   
   const { data: projects } = await axios.get(`${process.env.BACK_END}/projects?api_key=${process.env.API_SECRET_KEY}`);
+  const { data: technologies } = await axios.get(`${process.env.BACK_END}/technologies?api_key=${process.env.API_SECRET_KEY}`);
   return {
     props: {
-      projects
+      projects,
+      technologies
     }
   }
 }
