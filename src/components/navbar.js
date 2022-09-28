@@ -63,15 +63,11 @@ export const Navbar = () => {
                             </Link>
                         </li>
 
-
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                {variables.isSpanish ? "Idioma" : "Language"}
-                            </a>
-                            <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                                <li><div onClick={() => setLanguage("esp")} role="button" className='m-1'><img className='img img-fluid flag-icon' src="/spain.png" alt="" />{variables.isSpanish ? "Español" : "Spanish"}</div></li>
-                                <li><div onClick={() => setLanguage("ing")} role="button" className='m-1'><img className='img img-fluid flag-icon' src="/united-kingdom.png" alt="" />{variables.isSpanish ? "Inglés" : "English"}</div></li>
-                            </ul>
+                        <li className="nav-item">
+                            <div className="d-flex">
+                                <div onClick={() => setLanguage("esp")} role="button" className='m-0'><img className='img img-fluid flag-icon' src="/spain.png" alt="" /></div>
+                                <div onClick={() => setLanguage("ing")} role="button" className='m-0'><img className='img img-fluid flag-icon' src="/united-kingdom.png" alt="" /></div>
+                            </div>
                         </li>
                     </ul>
                 </div>
