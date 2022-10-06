@@ -55,11 +55,11 @@ export default function Home({ technologies }) {
                   <p className="card-text mt-3">
                     {
                       variables.isSpanish
-                        ? "Mi nombre es Luciano. Soy Desarrollador Full Stack, tengo algunos conocimientos de Minería de Datos y además soy Ingeniero Civil Químico." + " " +
-                        "Mi interés por la programación empezó durante la pandemia. Me vi forzado a cerrar el proyecto que estaba desarrollando en el momento y buscando alternativas de carrera que se pudieran hacer de manera remota decidí explorar la Minería de Datos." + " " +
+                        ? "Mi nombre es Luciano. Soy Desarrollador Full Stack, tengo conocimientos de Minería de Datos y además soy Ingeniero Civil Químico." + " " +
+                        "Mi interés por la programación empezó durante la pandemia. Buscando alternativas de carrera que se pudieran hacer de manera remota decidí explorar la Minería de Datos." + " " +
                         "Comenzé por aprender Python y luego realizé el diplomado \"Python y Minería de Datos\" de la Universidad Católica de Chile. Posteriormente, decidí complementar mis estudios con desarollo web, lo que me llevó a realizar el curso de \"Desarrollador Full Stack\" en 4Geeks Academy."
-                        : "My name is Luciano. I'm a Full Stack Developer, I have some knowledge in Data Mining and I'm also a Chemical Engineer." + " " +
-                        "My interest in programming began during the pandemic. I was forced to close the project I was working on and while searching for career alternatives that would allow me to work remotely I decided to explore Data Mining." + " " +
+                        : "My name is Luciano. I'm a Full Stack Developer, I have knowledge in Data Mining and I'm also a Chemical Engineer." + " " +
+                        "My interest in programming began during the pandemic. While searching for career alternatives that would allow me to work remotely I decided to explore Data Mining." + " " +
                         "First thing I did was learning Python and then I completed the diploma \"Python and Data Mining\" at Universidad Católica de Chile. Afterwards, I decided to complement my studies with web development, which lead me to complete the course \"Full Stack Developer\" at 4Geeks Academy."
                     }
                   </p>
