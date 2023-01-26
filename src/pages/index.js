@@ -34,7 +34,8 @@ export default function Home({ technologies }) {
           <h2 className="mt-0 ms-3">
             {variables.isSpanish ? "¡Hola!" : "Hi!"}
           </h2>
-          <p className="ms-3 me-3" style={{ height: "7em" }}>{
+          <p className="ms-3 me-3">
+            {
             variables.isSpanish
               ? "¡Gracias por visitar mi portafolio! Aquí encontrarás una selección de mi trabajo y proyectos pasados que muestran mis habilidades y experiencia. Estoy constantemente actualizando mi portafolio, por lo que visítalo a menudo para ver mis últimas creaciones."
               : "Thank you for visiting my portfolio! Here you will find a selection of my past work and projects that showcase my skills and experience. I am constantly updating my portfolio, so check back often to see my latest creations."
