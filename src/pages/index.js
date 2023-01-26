@@ -32,12 +32,12 @@ export default function Home({ technologies }) {
       <div className="row">
         <div className="col">
           <h2 className="mt-0 ms-3">
-            {variables.isSpanish ? "Hola!" : "Hi!"}
+            {variables.isSpanish ? "¡Hola!" : "Hi!"}
           </h2>
           <p className="ms-3 me-3" style={{ height: "7em" }}>{
             variables.isSpanish
-              ? "En esta página encontrarás información acerca de mí y de los proyectos en los que he trabajado. En la barra de navegación están las opciones de visitar la página con los proyectos, descargar mi CV en pdf o cambiar el idioma de la página."
-              : "In this page you will find information about me and the projects I have worked on. With the navigation bar you can visit the page with the projects, download my CV or change the language of the website. "
+              ? "¡Gracias por visitar mi portafolio! Aquí encontrarás una selección de mi trabajo y proyectos pasados que muestran mis habilidades y experiencia. Estoy constantemente actualizando mi portafolio, por lo que visítalo a menudo para ver mis últimas creaciones."
+              : "Thank you for visiting my portfolio! Here you will find a selection of my past work and projects that showcase my skills and experience. I am constantly updating my portfolio, so check back often to see my latest creations."
           }
           </p>
         </div>
@@ -55,58 +55,39 @@ export default function Home({ technologies }) {
                   <p className="card-text mt-3">
                     {
                       variables.isSpanish
-                        ? "Mi nombre es Luciano. Soy Desarrollador Full Stack, tengo conocimientos de Minería de Datos y además soy Ingeniero Civil Químico." + " " +
-                        "Mi interés por la programación empezó durante la pandemia. Buscando alternativas de carrera que se pudieran hacer de manera remota decidí explorar la Minería de Datos." + " " +
-                        "Comenzé por aprender Python y luego realizé el diplomado \"Python y Minería de Datos\" de la Universidad Católica de Chile. Posteriormente, decidí complementar mis estudios con desarollo web, lo que me llevó a realizar el curso de \"Desarrollador Full Stack\" en 4Geeks Academy."
-                        : "My name is Luciano. I'm a Full Stack Developer, I have knowledge in Data Mining and I'm also a Chemical Engineer." + " " +
-                        "My interest in programming began during the pandemic. While searching for career alternatives that would allow me to work remotely I decided to explore Data Mining." + " " +
-                        "First thing I did was learning Python and then I completed the diploma \"Python and Data Mining\" at Universidad Católica de Chile. Afterwards, I decided to complement my studies with web development, which lead me to complete the course \"Full Stack Developer\" at 4Geeks Academy."
+                        ? "Mi nombre es Luciano. Soy un Ingeniero Civil Químico en transición al mundo de la tecnología." + " " +
+                        "Tengo un diplomado en Python y Minería de Datos y un certificado de Desarrollador Full Stack." + " " +
+                        "Los lenguajes de programación que manejo son Python y Javascript. Algunas tecnologías relevantes con las que he trabajado son React, NextJS, NumPy, Pandas y Scikit-Learn."
+                        : "My name is Luciano. I'm a Chemical Engineer in transition to the IT world." + " " +
+                        "I have a diploma in Python and Data Mining and a Full Stack Developer certificate." + " " +
+                        "My main programming languages are Python and Javascript. Some other relevant technologies I have worked with are React, NextJS, NumPy, Pandas and Scikit-Learn."
                     }
                   </p>
                   <p className="card-text">
                     {
                       variables.isSpanish
-                        ? "Los proyectos más interesantes para mí incluyen:"
-                        : "The most interesting projects for me include:"
+                        ? "Actualmente estoy enfocado en mejorar mis habilidades para crear aplicaciones que funcionen en base a datos, que permitan a los usuarios tomar decisiones informadas y resolver problemas reales."
+                        : "I'm currently focused on improving my skills to create data driven applications that will allow the usesr to make informed decisions and solve real problems."
                     }
                   </p>
-                  <ul>
-                    <li>
-                      {
-                        variables.isSpanish
-                          ? "Trabajar con estructuras de datos y procesarlas para obtener resultados deseados (arrays/listas, objetos/diccionarios, etc)."
-                          : "Working with data structures and process them to obtain desired results (arrays/lists, objects/dictionaries, etc)."
-                      }
-                    </li>
-                    <li>
-                      {
-                        variables.isSpanish
-                          ? "Procesar datos y sacar conclusiones relevantes para resolver un problema."
-                          : "Process data and draw relevant conclusions to solve a problem."
-                      }
-                    </li>
-                    <li>
-                      {
-                        variables.isSpanish
-                          ? "Obtener datos de otras páginas (consumir APIs, webscraping, etc)."
-                          : "Get data from other websites (consuming APIs, webscraping, etc)."
-                      }
-                    </li>
-                  </ul>
-                  <p>
+
+                  <p className="card-text">
                     {
                       variables.isSpanish
-                        ? "Mis lenguajes de programación favoritos son Python y Javascript."
-                        : "My favorite programming languages are Python and Javascript."
+                        ? "Además de mis habilidades técnicas, aprendo rápido, soy orientado a detalles, analítico, tengo un nivel avanzado de inglés y siempre aprendiendo y mejorando."
+                        : "In addition to my technical skills, I'm also a fast learner, detail-oriented, analytical, I have an advanced level of english and I'm constantly learning and improving."
                     }
                   </p>
-                  <p>
+
+                  <p className="card-text">
                     {
                       variables.isSpanish
-                        ? "Me gusta trabajar con código limpio, fácil de leer y mantener."
-                        : "I like to work with clean code, easy to read and maintain."
+                        ? "Estoy emocionado de continuar mi viaje en la industria de la tecnología y estoy abierto a nuevas oportunidades para crecer y aprender. Creo que mi experiencia en ingeniería química y mi pasión por soluciones basadas en datos me convierten en un activo valioso para cualquier equipo. Tengo muchas ganas de poder usar mis habilidades y conocimientos para contribuir a proyectos significativos y tener un impacto real."
+                        : "I am excited to continue my journey in the technology industry and am open to new opportunities to grow and learn. I believe that my background in chemical engineering and my passion for data-driven solutions make me a valuable asset to any team. I am looking forward to using my skills and knowledge to contribute to meaningful projects and make a real impact."
                     }
                   </p>
+                  
+                  
                 </div>
               </div>
               <div className="col-md-3">
