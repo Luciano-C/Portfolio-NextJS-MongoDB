@@ -37,8 +37,8 @@ export default function Home({ technologies }) {
           <p className="ms-3 me-3">
             {
             variables.isSpanish
-              ? "¡Gracias por visitar mi portafolio! Aquí encontrarás una selección de mi trabajo y proyectos pasados que muestran mis habilidades y experiencia. Estoy constantemente actualizando mi portafolio, por lo que visítalo a menudo para ver mis últimas creaciones."
-              : "Thank you for visiting my portfolio! Here you will find a selection of my past work and projects that showcase my skills and experience. I am constantly updating my portfolio, so check back often to see my latest creations."
+              ? "¡Gracias por visitar mi portafolio! Aquí encontrarás una selección de mi trabajo y proyectos pasados que muestran mis habilidades y experiencia. Estoy constantemente actualizando mi portafolio, por lo que te invito a visitarlo con frecuencia para ver mis últimos proyectos."
+              : "Thank you for visiting my portfolio! Here you will find a selection of my past work and projects that showcase my skills and experience. I am constantly updating my portfolio, so I invite you to come back often to see my latest projects."
           }
           </p>
         </div>
@@ -58,10 +58,10 @@ export default function Home({ technologies }) {
                       variables.isSpanish
                         ? "Mi nombre es Luciano. Soy un Ingeniero Civil Químico en transición al mundo de la tecnología." + " " +
                         "Tengo un diplomado en Python y Minería de Datos y un certificado de Desarrollador Full Stack." + " " +
-                        "Los lenguajes de programación que manejo son Python y Javascript. Algunas tecnologías relevantes con las que he trabajado son React, NextJS, NumPy, Pandas y Scikit-Learn."
+                        "Los lenguajes de programación que manejo son Python y JavaScript. Algunas tecnologías con las que he trabajado son Django, React, NextJS, NumPy, Pandas y Scikit-Learn."
                         : "My name is Luciano. I'm a Chemical Engineer in transition to the IT world." + " " +
                         "I have a diploma in Python and Data Mining and a Full Stack Developer certificate." + " " +
-                        "My main programming languages are Python and Javascript. Some other relevant technologies I have worked with are React, NextJS, NumPy, Pandas and Scikit-Learn."
+                        "My main programming languages are Python and JavaScript. Some other technologies I have worked with are Django, React, NextJS, NumPy, Pandas and Scikit-Learn."
                     }
                   </p>
                   <p className="card-text">
@@ -75,16 +75,16 @@ export default function Home({ technologies }) {
                   <p className="card-text">
                     {
                       variables.isSpanish
-                        ? "Además de mis habilidades técnicas, aprendo rápido, soy orientado a detalles, analítico, tengo un nivel avanzado de inglés y siempre aprendiendo y mejorando."
-                        : "In addition to my technical skills, I'm also a fast learner, detail-oriented, analytical, I have an advanced level of english and I'm constantly learning and improving."
+                        ? "Además de mis habilidades técnicas, destaco por mi capacidad para aprender rápidamente y mi atención al detalle. Soy un pensador analítico y siempre estoy buscando maneras de mejorar mis habilidades y conocimientos. También cuento con un nivel avanzado de inglés, lo que me permite comunicarme eficazmente en un entorno internacional y trabajar con equipos distribuidos en diferentes partes del mundo."
+                        : "In addition to my technical skills, I stand out for my ability to learn quickly and my attention to detail. I am an analytical thinker and always looking for ways to improve my skills and knowledge. I also have an advanced level of English, which allows me to communicate effectively in an international environment and work with teams distributed in different parts of the world."
                     }
                   </p>
 
                   <p className="card-text">
                     {
                       variables.isSpanish
-                        ? "Estoy emocionado de continuar mi viaje en la industria de la tecnología y estoy abierto a nuevas oportunidades para crecer y aprender. Creo que mi experiencia en ingeniería química y mi pasión por soluciones basadas en datos me convierten en un activo valioso para cualquier equipo. Tengo muchas ganas de poder usar mis habilidades y conocimientos para contribuir a proyectos significativos y tener un impacto real."
-                        : "I am excited to continue my journey in the technology industry and am open to new opportunities to grow and learn. I believe that my background in chemical engineering and my passion for data-driven solutions make me a valuable asset to any team. I am looking forward to using my skills and knowledge to contribute to meaningful projects and make a real impact."
+                        ? "Estoy entusiasmado de continuar mi viaje en la industria de la tecnología y siempre estoy buscando nuevas oportunidades para crecer y aprender. Con mi experiencia en ingeniería química y mi interés en soluciones basadas en datos, creo que puedo aportar valor a cualquier equipo. Espero poder utilizar mis habilidades y conocimientos para contribuir a proyectos significativos y tener un impacto real."
+                        : "I am excited to continue my journey in the tech industry and always looking for new opportunities to grow and learn. With my background in chemical engineering and interest in data-driven solutions, I believe I can bring value to any team. I look forward to using my skills and knowledge to contribute to meaningful projects and make a real impact."
                     }
                   </p>
                   
