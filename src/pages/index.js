@@ -68,7 +68,7 @@ export default function Home({ technologies }) {
                     {
                       variables.isSpanish
                         ? "Actualmente estoy enfocado en mejorar mis habilidades para crear aplicaciones que funcionen en base a datos, que permitan a los usuarios tomar decisiones informadas y resolver problemas reales."
-                        : "I'm currently focused on improving my skills to create data driven applications that will allow the usesr to make informed decisions and solve real problems."
+                        : "I'm currently focused on improving my skills to create data driven applications that will allow the users to make informed decisions and solve real problems."
                     }
                   </p>
 
@@ -83,8 +83,8 @@ export default function Home({ technologies }) {
                   <p className="card-text">
                     {
                       variables.isSpanish
-                        ? "Estoy entusiasmado de continuar mi viaje en la industria de la tecnología y siempre estoy buscando nuevas oportunidades para crecer y aprender. Con mi experiencia en ingeniería química y mi interés en soluciones basadas en datos, creo que puedo aportar valor a cualquier equipo. Espero poder utilizar mis habilidades y conocimientos para contribuir a proyectos significativos y tener un impacto real."
-                        : "I am excited to continue my journey in the tech industry and always looking for new opportunities to grow and learn. With my background in chemical engineering and interest in data-driven solutions, I believe I can bring value to any team. I look forward to using my skills and knowledge to contribute to meaningful projects and make a real impact."
+                        ? "Estoy entusiasmado de continuar mi viaje en la industria de la tecnología y siempre estoy buscando nuevas oportunidades para crecer y aprender. Con mi experiencia en ingeniería química y mi interés en soluciones basadas en datos, creo que puedo aportar valor a cualquier equipo. Espero poder utilizar mis habilidades y conocimientos para contribuir a proyectos interesantes y desafiantes."
+                        : "I am excited to continue my journey in the tech industry and always looking for new opportunities to grow and learn. With my background in chemical engineering and interest in data-driven solutions, I believe I can bring value to any team. I look forward to using my skills and knowledge to contribute to interesting and challenging projects."
                     }
                   </p>
                   
