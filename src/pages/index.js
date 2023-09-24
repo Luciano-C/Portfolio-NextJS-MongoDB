@@ -1,11 +1,11 @@
-import { usePortfolioContext } from "../context/PortfolioContext"
+import { usePortfolioContext } from "../context/PortfolioContext";
 import axios from "axios"
 import { useEffect } from "react";
 
 
 
 
-export default function Home({ technologies }) {
+const Perfil = ({ technologies }) => {
 
   const { variables, actions } = usePortfolioContext();
 
@@ -32,13 +32,12 @@ export default function Home({ technologies }) {
       <div className="row">
         <div className="col">
           <h2 className="mt-0 ms-3">
-            {variables.isSpanish ? "¡Hola!" : "Hi!"}
+            {variables.isSpanish ? "Hola!" : "Hi!"}
           </h2>
-          <p className="ms-3 me-3">
-            {
+          <p className="ms-3 me-3" style={{ height: "7em" }}>{
             variables.isSpanish
-              ? "¡Gracias por visitar mi portafolio! Aquí encontrarás una selección de mi trabajo y proyectos pasados que muestran mis habilidades y experiencia. Estoy constantemente actualizando mi portafolio, por lo que te invito a visitarlo con frecuencia para ver mis últimos proyectos."
-              : "Thank you for visiting my portfolio! Here you will find a selection of my past work and projects that showcase my skills and experience. I am constantly updating my portfolio, so I invite you to come back often to see my latest projects."
+              ? "En esta página encontrarás información acerca de mí y de los proyectos en los que he trabajado. En la barra de navegación están las opciones de visitar la página con los proyectos, descargar mi CV en pdf o cambiar el idioma de la página."
+              : "In this page you will find information about me and the projects I have worked on. With the navigation bar you can visit the page with the projects, download my CV or change the language of the website. "
           }
           </p>
         </div>
@@ -56,39 +55,77 @@ export default function Home({ technologies }) {
                   <p className="card-text mt-3">
                     {
                       variables.isSpanish
-                        ? "Mi nombre es Luciano. Soy un Ingeniero Civil Químico en transición al mundo de la tecnología." + " " +
-                        "Tengo un diplomado en Python y Minería de Datos y un certificado de Desarrollador Full Stack." + " " +
-                        "Los lenguajes de programación que manejo son Python y JavaScript. Algunas tecnologías con las que he trabajado son Django, React, NextJS, NumPy, Pandas y Scikit-Learn."
-                        : "My name is Luciano. I'm a Chemical Engineer in transition to the IT world." + " " +
-                        "I have a diploma in Python and Data Mining and a Full Stack Developer certificate." + " " +
-                        "My main programming languages are Python and JavaScript. Some other technologies I have worked with are Django, React, NextJS, NumPy, Pandas and Scikit-Learn."
+                        ? "Mi nombre es Luciano. Soy Desarrollador Full Stack con un gran interés en Minería de Datos y Machine Learning." + " " +
+                        "Entre mis estudios tengo un Diplomado en \"Python y Minería de Datos\" de la Universidad Católica de Chile, un certificado de \"Desarrollador Full Stack\" en 4Geeks Academy y un título de Ingeniero Civil Químico de la Universida Católica de Valparaíso."
+                        : "My name is Luciano. I am a Full Stack Developer with a strong interest in Data Mining and Machine Learning." + " " +
+                        "Among my educational credentials are a diploma in \"Python and Data Mining\" from Universidad Católica de Chile, a \"Full Stack Developer\" certificate from 4Geeks Academy, and a degree in Chemical Engineering from Universidad Católica de Valparaíso."
                     }
                   </p>
-                  <p className="card-text">
+
+                  <p>
                     {
                       variables.isSpanish
-                        ? "Actualmente estoy enfocado en mejorar mis habilidades para crear aplicaciones que funcionen en base a datos, que permitan a los usuarios tomar decisiones informadas y resolver problemas reales."
-                        : "I'm currently focused on improving my skills to create data driven applications that will allow the users to make informed decisions and solve real problems."
+                        ? "Mis lenguajes de programación principales son Python y Javascript. Algunas tecnologías con las que me gusta trabajar incluyen Django, FastAPI, React y NextJS."
+                        : "My main programming languages are Python and Javascript. Some technologies that I like to work with include Django, FastAPI, React and NextJS."
                     }
                   </p>
 
                   <p className="card-text">
                     {
                       variables.isSpanish
-                        ? "Además de mis habilidades técnicas, destaco por mi capacidad para aprender rápidamente y mi atención al detalle. Soy un pensador analítico y siempre estoy buscando maneras de mejorar mis habilidades y conocimientos. También cuento con un nivel avanzado de inglés, lo que me permite comunicarme eficazmente en un entorno internacional y trabajar con equipos distribuidos en diferentes partes del mundo."
-                        : "In addition to my technical skills, I stand out for my ability to learn quickly and my attention to detail. I am an analytical thinker and always looking for ways to improve my skills and knowledge. I also have an advanced level of English, which allows me to communicate effectively in an international environment and work with teams distributed in different parts of the world."
+                        ? "Los proyectos más interesantes para mí incluyen:"
+                        : "The most interesting projects for me include:"
                     }
                   </p>
+                  <ul>
+                    <li>
+                      {
+                        variables.isSpanish
+                          ? "Integración de modelos de aprendizaje automático en aplicaciones web."
+                          : "Working with data structures and process them to obtain desired results (arrays/lists, objects/dictionaries, etc)."
+                      }
+                    </li>
+                    
+                    <li>
+                      {
+                        variables.isSpanish
+                          ? "Desarrollo de APIs robustas en el backend para soluciones escalables."
+                          : "Developing robust backend APIs for scalable solutions."
+                      }
+                    </li>
 
-                  <p className="card-text">
+                    <li>
+                      {
+                        variables.isSpanish
+                          ? "Análisis y procesamiento de datos para extraer insights significativos."
+                          : "Data analysis and processing to extract meaningful insights."
+                      }
+                    </li>
+
+                    <li>
+                      {
+                        variables.isSpanish
+                          ? "Despliegue de aplicaciones en entornos de nube como AWS y Digital Ocean."
+                          : "Deploying applications in cloud environments like AWS and Digital Ocean."
+                      }
+                    </li>
+
+                    <li>
+                      {
+                        variables.isSpanish
+                          ? "Trabajar con contenedores Docker para facilitar el desarrollo y la distribución."
+                          : "Working with Docker containers to streamline development and distribution."
+                      }
+                    </li> 
+                  </ul>
+                  
+                  <p>
                     {
                       variables.isSpanish
-                        ? "Estoy entusiasmado de continuar mi viaje en la industria de la tecnología y siempre estoy buscando nuevas oportunidades para crecer y aprender. Con mi experiencia en ingeniería química y mi interés en soluciones basadas en datos, creo que puedo aportar valor a cualquier equipo. Espero poder utilizar mis habilidades y conocimientos para contribuir a proyectos interesantes y desafiantes."
-                        : "I am excited to continue my journey in the tech industry and always looking for new opportunities to grow and learn. With my background in chemical engineering and interest in data-driven solutions, I believe I can bring value to any team. I look forward to using my skills and knowledge to contribute to interesting and challenging projects."
+                        ? "Me gusta trabajar con código limpio, fácil de leer y mantener."
+                        : "I like to work with clean code, easy to read and maintain."
                     }
                   </p>
-                  
-                  
                 </div>
               </div>
               <div className="col-md-3">
@@ -156,10 +193,11 @@ export default function Home({ technologies }) {
   )
 }
 
+export default Perfil
 
 export const getServerSideProps = async (context) => {
 
-  const { data: technologies } = await axios.get(`${process.env.BACK_END}/technologies?api_key=${process.env.API_SECRET_KEY}`);
+  const { data: technologies } = await axios.get(`${process.env.BACK_END}/technologies`);
   
 
   return {
