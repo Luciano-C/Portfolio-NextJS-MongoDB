@@ -56,7 +56,7 @@ const Perfil = ({ technologies }) => {
                     {
                       variables.isSpanish
                         ? "Mi nombre es Luciano. Soy Desarrollador Full Stack con un gran interés en Minería de Datos y Machine Learning." + " " +
-                        "Entre mis estudios tengo un Diplomado en \"Python y Minería de Datos\" de la Universidad Católica de Chile, un certificado de \"Desarrollador Full Stack\" en 4Geeks Academy y un título de Ingeniero Civil Químico de la Universida Católica de Valparaíso."
+                        "Entre mis estudios tengo un Diplomado en \"Python y Minería de Datos\" de la Universidad Católica de Chile, un certificado de \"Desarrollador Full Stack\" en 4Geeks Academy y un título de Ingeniero Civil Químico de la Universidad Católica de Valparaíso."
                         : "My name is Luciano. I am a Full Stack Developer with a strong interest in Data Mining and Machine Learning." + " " +
                         "Among my educational credentials are a diploma in \"Python and Data Mining\" from Universidad Católica de Chile, a \"Full Stack Developer\" certificate from 4Geeks Academy, and a degree in Chemical Engineering from Universidad Católica de Valparaíso."
                     }
