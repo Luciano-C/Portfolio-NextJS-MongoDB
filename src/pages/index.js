@@ -1,4 +1,4 @@
-import { usePortfolioContext } from "../context/PortfolioContext";
+import { usePortfolioContext } from "../context/PortfolioContext"
 import axios from "axios"
 import { useEffect } from "react";
 
@@ -195,10 +195,12 @@ const Perfil = ({ technologies }) => {
 
 export default Perfil
 
+
 export const getServerSideProps = async (context) => {
 
-  const { data: technologies } = await axios.get(`${process.env.BACK_END}/technologies`);
+  const { data: technologies } = await axios.get(`${process.env.BACK_END}/technologies?api_key=${process.env.API_SECRET_KEY}`);
   
+
   return {
     props: {
       technologies
