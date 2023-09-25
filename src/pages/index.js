@@ -199,7 +199,6 @@ export const getServerSideProps = async (context) => {
 
   const { data: technologies } = await axios.get(`${process.env.BACK_END}/technologies`);
   
-
   return {
     props: {
       technologies
