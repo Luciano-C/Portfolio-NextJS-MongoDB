@@ -36,8 +36,8 @@ const Perfil = ({ technologies }) => {
           </h2>
           <p className="ms-3 me-3" style={{ height: "7em" }}>{
             variables.isSpanish
-              ? "En esta página encontrarás información acerca de mí y de los proyectos en los que he trabajado. En la barra de navegación están las opciones de visitar la página con los proyectos, descargar mi CV en pdf o cambiar el idioma de la página."
-              : "In this page you will find information about me and the projects I have worked on. With the navigation bar you can visit the page with the projects, download my CV or change the language of the website. "
+              ? "En esta página encontrarás información acerca de mí, de los proyectos en los que he trabajado y algunas de las tecnologías que he utilizado."
+              : "In this page you will find information about me, the projects I have worked on and some of the technologies I have used."
           }
           </p>
         </div>
@@ -55,75 +55,24 @@ const Perfil = ({ technologies }) => {
                   <p className="card-text mt-3">
                     {
                       variables.isSpanish
-                        ? "Mi nombre es Luciano. Soy Desarrollador Full Stack con un gran interés en Minería de Datos y Machine Learning." + " " +
-                        "Entre mis estudios tengo un Diplomado en \"Python y Minería de Datos\" de la Universidad Católica de Chile, un certificado de \"Desarrollador Full Stack\" en 4Geeks Academy y un título de Ingeniero Civil Químico de la Universidad Católica de Valparaíso."
-                        : "My name is Luciano. I am a Full Stack Developer with a strong interest in Data Mining and Machine Learning." + " " +
-                        "Among my educational credentials are a diploma in \"Python and Data Mining\" from Universidad Católica de Chile, a \"Full Stack Developer\" certificate from 4Geeks Academy, and a degree in Chemical Engineering from Universidad Católica de Valparaíso."
+                        ? "Mi nombre es Luciano. Soy un ex Ingeniero Civil Químico que aprendió a programar de manera autodidacta el 2020. Posteriormente realicé un Diplomado en Python y Minería de Datos, seguido de un bootcamp de Desarrollo Full Stack. Hoy me encuentro liderando el equipo de desarrollo en mi empresa actual."
+                        : "My name is Luciano. I am a former Chemical Engineering who self-taught programming in 2020. Subsequently, I completed a Diploma in Python and Data Mining, followed by a Full Stack Development bootcamp. Today, I am leading the development team at my current company."
                     }
                   </p>
 
-                  <p>
+                  <p className="card-text mt-4">
                     {
                       variables.isSpanish
-                        ? "Mis lenguajes de programación principales son Python y Javascript. Algunas tecnologías con las que me gusta trabajar incluyen Django, FastAPI, React y NextJS."
-                        : "My main programming languages are Python and Javascript. Some technologies that I like to work with include Django, FastAPI, React and NextJS."
+                        ? "Entre mis éxitos destacan el lanzamiento de la plataforma E-Commerce de mi empresa actual y el desarrollo de una aplicación para optimizar las ventas, permitiendo realizar ofertas personalizadas basadas en historiales de compras de los clientes y precio de compra de los productos a proveedores."
+                        : "Among my notable achievements are the launch of the E-Commerce platform at my current company and the development of an application to optimize sales, enabling the creation of personalized offers based on customers' purchase histories and the purchase price of products from suppliers."
                     }
                   </p>
-
-                  <p className="card-text">
-                    {
-                      variables.isSpanish
-                        ? "Los proyectos más interesantes para mí incluyen:"
-                        : "The most interesting projects for me include:"
-                    }
-                  </p>
-                  <ul>
-                    <li>
-                      {
-                        variables.isSpanish
-                          ? "Integración de modelos de aprendizaje automático en aplicaciones web."
-                          : "Working with data structures and process them to obtain desired results (arrays/lists, objects/dictionaries, etc)."
-                      }
-                    </li>
-                    
-                    <li>
-                      {
-                        variables.isSpanish
-                          ? "Desarrollo de APIs robustas en el backend para soluciones escalables."
-                          : "Developing robust backend APIs for scalable solutions."
-                      }
-                    </li>
-
-                    <li>
-                      {
-                        variables.isSpanish
-                          ? "Análisis y procesamiento de datos para extraer insights significativos."
-                          : "Data analysis and processing to extract meaningful insights."
-                      }
-                    </li>
-
-                    <li>
-                      {
-                        variables.isSpanish
-                          ? "Despliegue de aplicaciones en entornos de nube como AWS y Digital Ocean."
-                          : "Deploying applications in cloud environments like AWS and Digital Ocean."
-                      }
-                    </li>
-
-                    <li>
-                      {
-                        variables.isSpanish
-                          ? "Trabajar con contenedores Docker para facilitar el desarrollo y la distribución."
-                          : "Working with Docker containers to streamline development and distribution."
-                      }
-                    </li> 
-                  </ul>
                   
-                  <p>
+                  <p className="card-text mt-4">
                     {
                       variables.isSpanish
-                        ? "Me gusta trabajar con código limpio, fácil de leer y mantener."
-                        : "I like to work with clean code, easy to read and maintain."
+                        ? "Mi experiencia está focalizada mayormente al desarrollo back-end con Python, desarrollo front-end con React y despliegue de aplicaciones utilizando AWS. Me gusta participar en proyectos que permitan generar valor a través de los datos, especialmente aquellos que involucren técnicas de Machine Learning o Deep Learning."
+                        : "My experience is primarily focused on back-end development with Python, front-end development with React, and deploying applications using AWS. I enjoy participating in projects that allow generating value through data, especially those involving Machine Learning or Deep Learning techniques."
                     }
                   </p>
                 </div>
