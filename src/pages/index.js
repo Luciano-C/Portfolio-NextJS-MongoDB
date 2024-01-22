@@ -71,7 +71,7 @@ const Perfil = ({ technologies }) => {
                   <p className="card-text mt-4">
                     {
                       variables.isSpanish
-                        ? "Mi experiencia está focalizada mayormente al desarrollo back-end con Python, desarrollo front-end con React y despliegue de aplicaciones utilizando AWS. Me gusta participar en proyectos que permitan generar valor a través de los datos, especialmente aquellos que involucren técnicas de Machine Learning o Deep Learning."
+                        ? "Mi experiencia está focalizada principalmente al desarrollo back-end con Python, desarrollo front-end con React y despliegue de aplicaciones utilizando AWS. Me gusta participar en proyectos que permitan generar valor a través de los datos, especialmente aquellos que involucren técnicas de Machine Learning o Deep Learning."
                         : "My experience is primarily focused on back-end development with Python, front-end development with React, and deploying applications using AWS. I enjoy participating in projects that allow generating value through data, especially those involving Machine Learning or Deep Learning techniques."
                     }
                   </p>
