@@ -55,16 +55,16 @@ const Perfil = ({ technologies }) => {
                   <p className="card-text mt-3">
                     {
                       variables.isSpanish
-                        ? "Mi nombre es Luciano. Soy un ex Ingeniero Civil Químico que aprendió a programar de manera autodidacta el 2020. Posteriormente realicé un Diplomado en Python y Minería de Datos, seguido de un bootcamp de Desarrollo Full Stack. Hoy me encuentro liderando el equipo de desarrollo en mi empresa actual."
-                        : "My name is Luciano. I am a former Chemical Engineering who self-taught programming in 2020. Subsequently, I completed a Diploma in Python and Data Mining, followed by a Full Stack Development bootcamp. Today, I am leading the development team at my current company."
+                        ? "Mi nombre es Luciano. Soy un ex Ingeniero Civil Químico que aprendió a programar de manera autodidacta el 2020. Posteriormente realicé un Diplomado en Python y Minería de Datos, seguido de un bootcamp de Desarrollo Full Stack."
+                        : "My name is Luciano. I am a former Chemical Engineering who self-taught programming in 2020. Subsequently, I completed a Diploma in Python and Data Mining, followed by a Full Stack Development bootcamp."
                     }
                   </p>
 
                   <p className="card-text mt-4">
                     {
                       variables.isSpanish
-                        ? "Entre mis éxitos destacan el lanzamiento de la plataforma E-Commerce de mi empresa actual y el desarrollo de una aplicación para optimizar las ventas, permitiendo realizar ofertas personalizadas basadas en historiales de compras de los clientes y precio de compra de los productos a proveedores."
-                        : "Among my notable achievements are the launch of the E-Commerce platform at my current company and the development of an application to optimize sales, enabling the creation of personalized offers based on customers' purchase histories and the purchase price of products from suppliers."
+                        ? "Actualmente lidero el equipo de desarrollo en mi empresa, donde he implementado una versión personalizada de Odoo (ERP) y una API que permite el funcionamiento de aplicaciones de E-Commerce y Picking. Además desarrollé una aplicación para optimizar ventas basada en historiales y precios de compra de los productos."
+                        : "Currently, I lead the development team at my company, where I have implemented a customized version of Odoo (ERP) and an API that enables the operation of E-Commerce and Picking applications. Additionally, I developed an application to optimize sales based on historical purchase records and product prices."
                     }
                   </p>
                   
