@@ -55,8 +55,8 @@ const Perfil = ({ technologies }) => {
                   <p className="card-text mt-3">
                     {
                       variables.isSpanish
-                        ? "Mi nombre es Luciano. Soy un ex Ingeniero Civil Químico que aprendió a programar de manera autodidacta el 2020. Posteriormente realicé un Diplomado en Python y Minería de Datos, seguido de un bootcamp de Desarrollo Full Stack."
-                        : "My name is Luciano. I am a former Chemical Engineering who self-taught programming in 2020. Subsequently, I completed a Diploma in Python and Data Mining, followed by a Full Stack Development bootcamp."
+                        ? "Mi nombre es Luciano. Soy un Desarrollador Full Stack que aprendió a programar de manera autodidacta el 2020. Posteriormente realicé un Diplomado en Python y Minería de Datos, seguido de un bootcamp de Desarrollo Full Stack."
+                        : "My name is Luciano. I am a Full Stack Developer who self-taught programming in 2020. Subsequently, I completed a Diploma in Python and Data Mining, followed by a Full Stack Development bootcamp."
                     }
                   </p>
 
