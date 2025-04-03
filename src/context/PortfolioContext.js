@@ -12,7 +12,7 @@ export const usePortfolioContext = () => {
 export const PortfolioProvider = ({ children }) => {
     // Variables
     const [filters, setFilters] = useState([]);
-    const [isSpanish, setIsSpanish] = useState(true);
+    const [isSpanish, setIsSpanish] = useState(false);
     
     // Actions
     const addFilter = (filter) => {

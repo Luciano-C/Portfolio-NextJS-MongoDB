@@ -31,54 +31,45 @@ const Perfil = ({ technologies }) => {
 
       <div className="row">
         <div className="col">
-          <h2 className="mt-0 ms-3">
-            {variables.isSpanish ? "Hola!" : "Hi!"}
-          </h2>
-          <p className="ms-3 me-3" style={{ height: "7em" }}>{
-            variables.isSpanish
-              ? "En esta página encontrarás información acerca de mí, de los proyectos en los que he trabajado y algunas de las tecnologías que he utilizado."
-              : "In this page you will find information about me, the projects I have worked on and some of the technologies I have used."
-          }
-          </p>
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col">
           <h2 className="ms-3 mt-3">
             {variables.isSpanish ? "Acerca de mí" : "About me"}
           </h2>
           <div className="card mb-3 bg-transparent border-0" style={{ maxWidth: "98%" }}>
             <div className="row g-0">
-              <div className="col-md-9">
+              <div>
                 <div className="card-body">
                   <p className="card-text mt-3">
                     {
                       variables.isSpanish
-                        ? "Mi nombre es Luciano. Soy un Desarrollador Full Stack que aprendió a programar de manera autodidacta el 2020. Posteriormente realicé un Diplomado en Python y Minería de Datos, seguido de un bootcamp de Desarrollo Full Stack."
-                        : "My name is Luciano. I am a Full Stack Developer who self-taught programming in 2020. Subsequently, I completed a Diploma in Python and Data Mining, followed by a Full Stack Development bootcamp."
+                        ? "¡Hola! Soy Luciano, Desarrollador Full Stack e Ingeniero Químico, orientado a resolver problemas complejos con un enfoque analítico."
+                        : "Hi! I'm Luciano, a Full Stack Developer and Chemical Engineer oriented toward solving complex problems with an analytical approach."
                     }
                   </p>
 
-                  <p className="card-text mt-4">
+                  <p className="card-text mt-3">
                     {
                       variables.isSpanish
-                        ? "Actualmente lidero el equipo de desarrollo en mi empresa, donde he implementado una versión personalizada de Odoo (ERP) y una API que permite el funcionamiento de aplicaciones de E-Commerce y Picking. Además desarrollé una aplicación para optimizar ventas basada en historiales y precios de compra de los productos."
-                        : "Currently, I lead the development team at my company, where I have implemented a customized version of Odoo (ERP) and an API that enables the operation of E-Commerce and Picking applications. Additionally, I developed an application to optimize sales based on historical purchase records and product prices."
+                        ? "Tras hacer la transición desde la ingeniería hacia el desarrollo de software, realicé un Diplomado en Python y Minería de Datos, seguido de un bootcamp de Desarrollo Full Stack."
+                        : "After shifting from engineering to software development, I completed a Diploma in Python and Data Mining and later a Full Stack Development bootcamp."
                     }
                   </p>
                   
-                  <p className="card-text mt-4">
+                  <p className="card-text mt-3">
                     {
                       variables.isSpanish
-                        ? "Mi experiencia está focalizada principalmente al desarrollo back-end con Python, desarrollo front-end con React y despliegue de aplicaciones utilizando AWS. Me gusta participar en proyectos que permitan generar valor a través de los datos, especialmente aquellos que involucren técnicas de Machine Learning o Deep Learning."
-                        : "My experience is primarily focused on back-end development with Python, front-end development with React, and deploying applications using AWS. I enjoy participating in projects that allow generating value through data, especially those involving Machine Learning or Deep Learning techniques."
+                        ? "Desde entonces, he trabajado en proyectos enfocados en el desarrollo back-end, incluyendo la creación de APIs, integraciones con sistemas ERP y el despliegue de aplicaciones utilizando tecnologías como FastAPI, Django, Docker y AWS."
+                        : "Since then, I've worked on backend-focused projects involving API development, ERP integrations, and deployment using technologies like FastAPI, Django, Docker, and AWS."
+                    }
+                  </p>
+
+                  <p className="card-text mt-3">
+                    {
+                      variables.isSpanish
+                        ? "Actualmente estoy enfocado en el desarrollo back-end con Python y me interesan los proyectos que involucren Machine Learning, Deep Learning y Ciencia de Datos."
+                        : "I'm currently focused on Python-based back-end development and interested in projects involving Machine Learning, Deep Learning, and Data Science."
                     }
                   </p>
                 </div>
-              </div>
-              <div className="col-md-3">
-                <img src="https://res.cloudinary.com/dpfjfmvzs/image/upload/v1661275299/Portfolio/General/Untitled_design_l9sufs.png" className="profile-photo rounded ms-1 me-1" alt="..." />
               </div>
             </div>
           </div>
@@ -93,8 +84,8 @@ const Perfil = ({ technologies }) => {
           <p className="m-3">
             {
               variables.isSpanish
-                ? "Estas son algunas de las tecnologías con las que he trabajado."
-                : "These are some of the technologies I have worked with."
+                ? "Estas son algunas de las tecnologías que he utilizado o que estoy explorando actualmente."
+                : "These are some of the technologies I’ve worked with or am currently exploring."
             }
           </p>
           <ul className="d-flex overflow-auto justify-content-between p-2 m-3">
