@@ -102,33 +102,6 @@ const Perfil = ({ technologies }) => {
           </ul>
         </div>
       </div>
-
-      <div className="row">
-        <div className="col">
-          <h2 className="m-3">
-            {variables.isSpanish ? "Actualmente aprendiendo" : "Currently learning"}
-          </h2>
-          <p className="m-3">
-            {
-              variables.isSpanish
-                ? "Estas son algunas de las tecnologías que estoy aprendiendo actualmente."
-                : "These are some of the technologies I'm currently learning."
-            }
-          </p>
-          <ul className="d-flex overflow-auto justify-content-start p-2 m-3">
-            {technologies.filter(x => x.status === "learning").map((x, i) => {
-              return (
-                <div key={i} className="m-4 d-flex flex-column align-items-center">
-                  <div className="technology-background d-flex justify-content-center align-items-center">
-                    <img src={x.link} className="img technologies" />
-                  </div>
-                  <span>{x.name}</span>
-                </div>
-              )
-            })}
-          </ul>
-        </div>
-      </div>
     </div>
   )
 }
